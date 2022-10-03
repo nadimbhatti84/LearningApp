@@ -1,9 +1,6 @@
 package ch.bzz.bookultimate.service;
 
 
-import ch.bzz.bookultimate.util.AuthorizationFilter;
-import ch.bzz.bookultimate.util.LocalDateParamConverterProvider;
-
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.io.FileInputStream;
@@ -20,7 +17,7 @@ import java.util.Set;
 @ApplicationPath("/resource")
 
 public class Config extends Application {
-    private static final String PROPERTIES_PATH = "/home/bzz/webapp/bookUltimate.properties";
+    private static final String PROPERTIES_PATH = "/home/bzz/webapp/learningApp.properties";
     private static Properties properties = null;
 
     /**
@@ -32,13 +29,8 @@ public class Config extends Application {
     @SuppressWarnings("unchecked")
     public Set<Class<?>> getClasses() {
         HashSet providers = new HashSet<Class<?>>();
-        providers.add(BookService.class);
-        providers.add(PublisherService.class);
-        providers.add(AuthorService.class);
-        providers.add(UserService.class);
-        providers.add(TestService.class);
-        providers.add(LocalDateParamConverterProvider.class);
-        providers.add(AuthorizationFilter.class);
+        providers.add(SchoolClassService.class);
+        providers.add(StudentService.class);
         return providers;
     }
 
