@@ -1,0 +1,33 @@
+[ {
+  "bookUUID" : "3247c340-c712-402e-b400-0a23a9368c97",
+  "title" : "An Echo Of Things To Come",
+  "authorsUUID" : [ "d7f26c0c-495e-4321-ab31-33d7722d318c" ],
+  "price" : 32.5,
+  "isbn" : "978-0-3162-7409-8",
+  "release" : "2022-02-02",
+  "publisherUUID" : "ecd86148-5341-43c6-81ed-f3f4595965dc"
+}, {
+  "bookUUID" : "db117daa-e295-4597-abcd-a69496797dc0",
+  "title" : "The Shadow of What Was Lost",
+  "authorsUUID" : [ "d7f26c0c-495e-4321-ab31-33d7722d318c" ],
+  "price" : 50,
+  "isbn" : "978-0-3162-7407-4",
+  "release" : "2021-10-01",
+  "publisherUUID" : "ecd86148-5341-43c6-81ed-f3f4595965dc"
+}, {
+  "bookUUID" : "c746a291-0ef9-4b2a-8268-392b12d636bd",
+  "title" : "The Winds of Winter",
+  "authorsUUID" : [ "f1c90a12-f071-49ec-95cf-646ef1d2a55e" ],
+  "price" : 52.75,
+  "isbn" : "978-0-3162-7409-8",
+  "release" : "2019-09-19",
+  "publisherUUID" : "606cc4a5-8bfd-4e24-85c1-ecf6b9814712"
+}, {
+  "bookUUID" : "73bd4187-a5b7-4864-be79-327bb8ed43bf",
+  "title" : "The wise man's fear",
+  "authorsUUID" : [ "f1c90a12-f071-49ec-95cf-646ef1d2a55e", "ff5abee8-2727-46b8-ac5f-b6ba32b7df8c" ],
+  "price" : 27.75,
+  "isbn" : "978-0-7564-0473-4",
+  "release" : "2018-08-08",
+  "publisherUUID" : "06fc334d-7b02-434f-9222-6544d30d8832"
+} ]
