@@ -1,8 +1,7 @@
-package ch.bzz.bookultimate.service;
+package ch.bzz.learningapp.service;
 
-import ch.bzz.bookultimate.data.DataHandler;
-import ch.bzz.bookultimate.model.SchoolClass;
-import ch.bzz.bookultimate.model.Student;
+import ch.bzz.learningapp.data.DataHandler;
+import ch.bzz.learningapp.model.SchoolClass;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -11,7 +10,6 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-import java.util.Vector;
 
 /**
  * schoolclass service

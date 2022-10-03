@@ -1,10 +1,10 @@
-package ch.bzz.bookultimate.model;
+package ch.bzz.learningapp.model;
 
 public class SchoolClass {
 
     private int schoolClassID;
     private String schoolClassName;
-    private String studentIDs;
+    private int[] studentIDs;
 
     public int getSchoolClassID() {
         return schoolClassID;
@@ -12,7 +12,5 @@ public class SchoolClass {
     public String getSchoolClassName() {
         return schoolClassName;
     }
-    public String getStudentIDs() {
-        return studentIDs;
-    }
+    public int[] getStudentIDs() { return studentIDs; }
 }

@@ -1,4 +1,4 @@
-package ch.bzz.bookultimate.service;
+package ch.bzz.learningapp.service;
 
 
 import javax.ws.rs.ApplicationPath;

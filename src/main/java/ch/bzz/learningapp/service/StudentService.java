@@ -1,6 +1,6 @@
-package ch.bzz.bookultimate.service;
-import ch.bzz.bookultimate.data.DataHandler;
-import ch.bzz.bookultimate.model.Student;
+package ch.bzz.learningapp.service;
+import ch.bzz.learningapp.data.DataHandler;
+import ch.bzz.learningapp.model.Student;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

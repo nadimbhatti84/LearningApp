@@ -1,22 +1,16 @@
-package ch.bzz.bookultimate.data;
+package ch.bzz.learningapp.data;
 
-import ch.bzz.bookultimate.model.SchoolClass;
-import ch.bzz.bookultimate.model.Student;
-import ch.bzz.bookultimate.service.Config;
+import ch.bzz.learningapp.model.SchoolClass;
+import ch.bzz.learningapp.model.Student;
+import ch.bzz.learningapp.service.Config;
 
-import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 /**
  * reads and writes the data in the JSON-files

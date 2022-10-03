@@ -1,4 +1,4 @@
-package ch.bzz.bookultimate.model;
+package ch.bzz.learningapp.model;
 
 public class Student {
 
