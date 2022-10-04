@@ -1,7 +1,9 @@
-[ {
+[
+{
   "studentID" : 1,
   "studentFirstName" : "Test",
   "studentLastName" : "Student",
-  "student_notes" : "Ich bin Notiz",
+  "student_Notes" : "Ich bin Notiz",
   "portraitPath" : "test/portraits/student"
-} ]
+}
+]

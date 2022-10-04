@@ -1,5 +1,5 @@
 [ {
-  "schoolCLassID" : 1,
+  "schoolClassID" : 1,
   "schoolClassName" : "IM20A",
-  "studentIDs" : "1 2 3 4 5"
+  "studentIDs" : [1,2]
 } ]
