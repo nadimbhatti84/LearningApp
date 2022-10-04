@@ -16,7 +16,7 @@ public class StudentService {
     @GET
     @Path("list")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response listVehicle(){
+    public Response listStudent(){
         int httpStatus = 200;
         List<Student> studentList = null;
         studentList = DataHandler.readAllStudents();
@@ -33,7 +33,7 @@ public class StudentService {
     @GET
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response readVehicle(
+    public Response readStudent(
             @QueryParam("studentID") String studentID
     ){
         int httpStatus = 200;
