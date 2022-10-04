@@ -4,9 +4,12 @@ import ch.bzz.learningapp.model.SchoolClass;
 import ch.bzz.learningapp.model.Student;
 import ch.bzz.learningapp.service.Config;
 
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -179,6 +182,32 @@ public class DataHandler {
             }
         }
         return maxID;
+    }
+
+    /**
+     * updates the schoolList
+     */
+    public static void updateSchoolClass() {
+        writeSchoolClassJSON();
+    }
+
+    /**
+     * writes the schoolList to the JSON-file
+     */
+    private static void writeSchoolClassJSON() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectWriter objectWriter = objectMapper.writer(new DefaultPrettyPrinter());
+        FileOutputStream fileOutputStream = null;
+        Writer fileWriter;
+
+        String schoolClassPath = Config.getProperty("schoolClassJSON");
+        try {
+            fileOutputStream = new FileOutputStream(schoolClassPath);
+            fileWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8));
+            objectWriter.writeValue(fileWriter, getSchoolClassList());
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
 }

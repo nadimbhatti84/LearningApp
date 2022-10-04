@@ -3,12 +3,11 @@ package ch.bzz.learningapp.service;
 import ch.bzz.learningapp.data.DataHandler;
 import ch.bzz.learningapp.model.SchoolClass;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.validation.Valid;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.xml.crypto.Data;
 import java.util.List;
 
 /**
@@ -57,5 +56,25 @@ public class SchoolClassService {
                 .build();
     }
 
+    /**
+     * updates a schoolClass (adds learning process)
+     * @param schoolClass the id
+     * @return Response
+     */
+    @POST
+    @Path("update")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response updateSchoolClass(
+            @Valid @BeanParam SchoolClass schoolClass
+    ){
+        int httpStatus = 200;
+        SchoolClass oldSchoolClass = DataHandler.readSchoolClassByID(Integer.toString(schoolClass.getSchoolClassID()));
+        oldSchoolClass.getLearned().add(schoolClass.getLearned().get(0));
+        DataHandler.updateSchoolClass();
+        return Response
+                .status(httpStatus)
+                .entity("")
+                .build();
+    }
 
 }
