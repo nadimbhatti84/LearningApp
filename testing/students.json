@@ -1,9 +1,476 @@
-[
+[{
+    "studentID" : 77657,
+    "studentFirstName" : "Alessio",
+    "studentLastName" : "Lama",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Alessio_Lama.jpg"
+},
 {
-  "studentID" : 1,
-  "studentFirstName" : "Test",
-  "studentLastName" : "Student",
-  "student_Notes" : "Ich bin Notiz",
-  "portraitPath" : "test/portraits/student"
-}
-]
+    "studentID" : 77645,
+    "studentFirstName" : "Ava",
+    "studentLastName" : "Reindl",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Ava_Reindl.jpg"
+},
+{
+    "studentID" : 77647,
+    "studentFirstName" : "Barnaba",
+    "studentLastName" : "Newall",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Barnaba_Newall.jpg"
+},
+{
+    "studentID" : 77658,
+    "studentFirstName" : "Ben",
+    "studentLastName" : "Braendle",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Ben_Braendle.jpg"
+},
+{
+    "studentID" : 77653,
+    "studentFirstName" : "David",
+    "studentLastName" : "Zettler",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/David_Zettler.jpg"
+},
+{
+    "studentID" : 77656,
+    "studentFirstName" : "Dominic",
+    "studentLastName" : "Obrist",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Dominic_Obrist.jpg"
+},
+{
+    "studentID" : 77648,
+    "studentFirstName" : "Fernando",
+    "studentLastName" : "Meier",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Fernando_Meier.jpg"
+},
+{
+    "studentID" : 77650,
+    "studentFirstName" : "Jayden",
+    "studentLastName" : "Eggenschwiler",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Jayden_Eggenschwiler.jpg"
+},
+{
+    "studentID" : 77667,
+    "studentFirstName" : "Kaylin",
+    "studentLastName" : "Booth",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Kaylin_Booth.jpg"
+},
+{
+    "studentID" : 77665,
+    "studentFirstName" : "Lambotharan",
+    "studentLastName" : "Logendran",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Lambotharan_Logendran.jpg"
+},
+{
+    "studentID" : 77662,
+    "studentFirstName" : "Lucas",
+    "studentLastName" : "Blom",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Lucas_Blom.jpg"
+},
+{
+    "studentID" : 77649,
+    "studentFirstName" : "Marco",
+    "studentLastName" : "Spina",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Marco_Spina.jpg"
+},
+{
+    "studentID" : 77660,
+    "studentFirstName" : "Miro",
+    "studentLastName" : "Lacoste",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Miro_Lacoste.jpg"
+},
+{
+    "studentID" : 77652,
+    "studentFirstName" : "Nikita",
+    "studentLastName" : "Kochkarov",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Nikita_Kochkarov.jpg"
+},
+{
+    "studentID" : 77646,
+    "studentFirstName" : "Nikola",
+    "studentLastName" : "Antic",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Nikola_Antic.jpg"
+},
+{
+    "studentID" : 77661,
+    "studentFirstName" : "Nils",
+    "studentLastName" : "Fischer",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Nils_Fischer.jpg"
+},
+{
+    "studentID" : 77644,
+    "studentFirstName" : "Philipp",
+    "studentLastName" : "Sutter",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Philipp_Sutter.jpg"
+},
+{
+    "studentID" : 77666,
+    "studentFirstName" : "Robin",
+    "studentLastName" : "Trachsel",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Robin_Trachsel.jpg"
+},
+{
+    "studentID" : 77654,
+    "studentFirstName" : "Sami",
+    "studentLastName" : "Hindi",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Sami_Hindi.jpg"
+},
+{
+    "studentID" : 77664,
+    "studentFirstName" : "Shahin",
+    "studentLastName" : "Amon",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Shahin_Amon.jpg"
+},
+{
+    "studentID" : 77651,
+    "studentFirstName" : "Vuk",
+    "studentLastName" : "Vukolic",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Vuk_Vukolic.jpg"
+},
+{
+    "studentID" : 77659,
+    "studentFirstName" : "Xavier",
+    "studentLastName" : "Gauye",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Xavier_Gauye.jpg"
+},
+{
+    "studentID" : 77655,
+    "studentFirstName" : "Yanik",
+    "studentLastName" : "Perez",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Yanik_Perez.jpg"
+},
+{
+    "studentID" : 77663,
+    "studentFirstName" : "Yven",
+    "studentLastName" : "Radler",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IM20a/Yven_Radler.jpg"
+},
+{
+    "studentID" : 77981,
+    "studentFirstName" : "Aleksandar",
+    "studentLastName" : "Milosevic",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Aleksandar_Milosevic.jpg"
+},
+{
+    "studentID" : 77969,
+    "studentFirstName" : "Amel",
+    "studentLastName" : "Taraniš",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Amel_Taraniš.jpg"
+},
+{
+    "studentID" : 77987,
+    "studentFirstName" : "Andreas",
+    "studentLastName" : "Felder",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Andreas_Felder.jpg"
+},
+{
+    "studentID" : 77978,
+    "studentFirstName" : "Arlind",
+    "studentLastName" : "Dauti",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Arlind_Dauti.jpg"
+},
+{
+    "studentID" : 77980,
+    "studentFirstName" : "Benjamin",
+    "studentLastName" : "Apter",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Benjamin_Apter.jpg"
+},
+{
+    "studentID" : 77990,
+    "studentFirstName" : "Daniel",
+    "studentLastName" : "Gardel",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Daniel_Gardel.jpg"
+},
+{
+    "studentID" : 77974,
+    "studentFirstName" : "Daria",
+    "studentLastName" : "Heusser",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Daria_Heusser.jpg"
+},
+{
+    "studentID" : 77970,
+    "studentFirstName" : "Ejla",
+    "studentLastName" : "Maksuti",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Ejla_Maksuti.jpg"
+},
+{
+    "studentID" : 77985,
+    "studentFirstName" : "Elina",
+    "studentLastName" : "Spahija",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Elina_Spahija.jpg"
+},
+{
+    "studentID" : 77984,
+    "studentFirstName" : "Harishankar",
+    "studentLastName" : "Pandian",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Harishankar_Pandian.jpg"
+},
+{
+    "studentID" : 77983,
+    "studentFirstName" : "Ilenia",
+    "studentLastName" : "Zeindler",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Ilenia_Zeindler.jpg"
+},
+{
+    "studentID" : 77975,
+    "studentFirstName" : "Julian",
+    "studentLastName" : "Mandelartz",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Julian_Mandelartz.jpg"
+},
+{
+    "studentID" : 77971,
+    "studentFirstName" : "Leo",
+    "studentLastName" : "Strebel",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Leo_Strebel.jpg"
+},
+{
+    "studentID" : 77973,
+    "studentFirstName" : "Levin",
+    "studentLastName" : "Grieder",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Levin_Grieder.jpg"
+},
+{
+    "studentID" : 77976,
+    "studentFirstName" : "Lucas",
+    "studentLastName" : "Zumtaugwald",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Lucas_Zumtaugwald.jpg"
+},
+{
+    "studentID" : 77982,
+    "studentFirstName" : "Noa",
+    "studentLastName" : "Pluess",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Noa_Pluess.jpg"
+},
+{
+    "studentID" : 77989,
+    "studentFirstName" : "Robin",
+    "studentLastName" : "Markant",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Robin_Markant.jpg"
+},
+{
+    "studentID" : 77986,
+    "studentFirstName" : "Sandro",
+    "studentLastName" : "Hutter",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Sandro_Hutter.jpg"
+},
+{
+    "studentID" : 77972,
+    "studentFirstName" : "Sean",
+    "studentLastName" : "Kurath",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Sean_Kurath.jpg"
+},
+{
+    "studentID" : 77988,
+    "studentFirstName" : "Tom",
+    "studentLastName" : "Thoma",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Tom_Thoma.jpg"
+},
+{
+    "studentID" : 77977,
+    "studentFirstName" : "Vanesa",
+    "studentLastName" : "Sylejmani",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Vanesa_Sylejmani.jpg"
+},
+{
+    "studentID" : 77968,
+    "studentFirstName" : "Yoel",
+    "studentLastName" : "Bider",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21a/Yoel_Bider.jpg"
+},
+{
+    "studentID" : 78008,
+    "studentFirstName" : "Anto",
+    "studentLastName" : "Corkovic",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Anto_Corkovic.jpg"
+},
+{
+    "studentID" : 77993,
+    "studentFirstName" : "Elena",
+    "studentLastName" : "Peric",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Elena_Peric.jpg"
+},
+{
+    "studentID" : 78004,
+    "studentFirstName" : "Elias",
+    "studentLastName" : "Benz",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Elias_Benz.jpg"
+},
+{
+    "studentID" : 77999,
+    "studentFirstName" : "Elisa",
+    "studentLastName" : "Lam",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Elisa_Lam.jpg"
+},
+{
+    "studentID" : 77996,
+    "studentFirstName" : "Gian",
+    "studentLastName" : "Guentensperger",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Gian_Guentensperger.jpg"
+},
+{
+    "studentID" : 77994,
+    "studentFirstName" : "Janic",
+    "studentLastName" : "Deschmann",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Janic_Deschmann.jpg"
+},
+{
+    "studentID" : 78001,
+    "studentFirstName" : "Jenaya",
+    "studentLastName" : "Chartony",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Jenaya_Chartony.jpg"
+},
+{
+    "studentID" : 78002,
+    "studentFirstName" : "Joseline",
+    "studentLastName" : "Colquechambi",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Joseline_Colquechambi.jpg"
+},
+{
+    "studentID" : 77998,
+    "studentFirstName" : "Kerem",
+    "studentLastName" : "Telli",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Kerem_Telli.jpg"
+},
+{
+    "studentID" : 78005,
+    "studentFirstName" : "Leander",
+    "studentLastName" : "Chenaux",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Leander_Chenaux.jpg"
+},
+{
+    "studentID" : 78010,
+    "studentFirstName" : "Leonid",
+    "studentLastName" : "Kaup",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Leonid_Kaup.jpg"
+},
+{
+    "studentID" : 78003,
+    "studentFirstName" : "Luca",
+    "studentLastName" : "Blaesi",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Luca_Blaesi.jpg"
+},
+{
+    "studentID" : 77995,
+    "studentFirstName" : "Mattia",
+    "studentLastName" : "Lepore",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Mattia_Lepore.jpg"
+},
+{
+    "studentID" : 78012,
+    "studentFirstName" : "Melinda",
+    "studentLastName" : "Alp",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Melinda_Alp.jpg"
+},
+{
+    "studentID" : 78011,
+    "studentFirstName" : "Mischa",
+    "studentLastName" : "Shanmuganathan",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Mischa_Shanmuganathan.jpg"
+},
+{
+    "studentID" : 78007,
+    "studentFirstName" : "Noah",
+    "studentLastName" : "Bargisen",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Noah_Bargisen.jpg"
+},
+{
+    "studentID" : 78009,
+    "studentFirstName" : "Quentin",
+    "studentLastName" : "Schoenenberger",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Quentin_Schoenenberger.jpg"
+},
+{
+    "studentID" : 77991,
+    "studentFirstName" : "Robin",
+    "studentLastName" : "Faeh",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Robin_Faeh.jpg"
+},
+{
+    "studentID" : 78006,
+    "studentFirstName" : "Thierry",
+    "studentLastName" : "Luethy",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Thierry_Luethy.jpg"
+},
+{
+    "studentID" : 78000,
+    "studentFirstName" : "Yannick",
+    "studentLastName" : "Buehler",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Yannick_Buehler.jpg"
+},
+{
+    "studentID" : 77997,
+    "studentFirstName" : "Zara",
+    "studentLastName" : "Ramirez",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Zara_Ramirez.jpg"
+},
+{
+    "studentID" : 78013,
+    "studentFirstName" : "Zarin",
+    "studentLastName" : "Sivakumar",
+    "student_Notes" : " ",
+    "portraitPath" : "resources/portrait/IA21b/Zarin_Sivakumar.jpg"
+}]
