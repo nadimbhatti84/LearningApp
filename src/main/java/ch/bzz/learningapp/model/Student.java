@@ -12,7 +12,6 @@ public class Student {
     public int getStudentID() {
         return studentID;
     }
-
     public String getStudentFirstName() {
         return studentFirstName;
     }
@@ -25,5 +24,7 @@ public class Student {
     public String getPortraitPath() {
         return portraitPath;
     }
-
+    public void setStudent_Notes(String student_Notes) {
+        this.student_Notes = student_Notes;
+    }
 }

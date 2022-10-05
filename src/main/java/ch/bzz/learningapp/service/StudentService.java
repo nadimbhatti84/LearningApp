@@ -1,5 +1,6 @@
 package ch.bzz.learningapp.service;
 import ch.bzz.learningapp.data.DataHandler;
+import ch.bzz.learningapp.model.SchoolClass;
 import ch.bzz.learningapp.model.Student;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -24,6 +25,30 @@ public class StudentService {
         return Response
                 .status(httpStatus)
                 .entity(studentList)
+                .build();
+    }
+
+    /**
+     * adds notes to student
+     */
+    @GET
+    @Path("addNotes")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addLearned(
+            @QueryParam("studentID") String studentID,
+            @QueryParam("notes") String notes
+    ){
+        int httpStatus = 404;
+        Student student = new Student();
+        student = DataHandler.readStudentByID(studentID);
+        if (student != null){
+            student.setStudent_Notes(notes);
+            DataHandler.updateStudent();
+            httpStatus = 200;
+        }
+        return Response
+                .status(httpStatus)
+                .entity("")
                 .build();
     }
 }

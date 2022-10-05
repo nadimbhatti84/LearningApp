@@ -192,6 +192,13 @@ public class DataHandler {
     }
 
     /**
+     * updates the studentList
+     */
+    public static void updateStudent() {
+        writeStudentJSON();
+    }
+
+    /**
      * writes the schoolList to the JSON-file
      */
     private static void writeSchoolClassJSON() {
@@ -210,4 +217,22 @@ public class DataHandler {
         }
     }
 
+    /**
+     * writes the student to the JSON-file
+     */
+    private static void writeStudentJSON() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectWriter objectWriter = objectMapper.writer(new DefaultPrettyPrinter());
+        FileOutputStream fileOutputStream = null;
+        Writer fileWriter;
+
+        String studentPath = Config.getProperty("studentJSON");
+        try {
+            fileOutputStream = new FileOutputStream(studentPath);
+            fileWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8));
+            objectWriter.writeValue(fileWriter, getStudentList());
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
 }
