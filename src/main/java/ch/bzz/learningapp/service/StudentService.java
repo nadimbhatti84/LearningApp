@@ -41,7 +41,8 @@ public class StudentService {
         int httpStatus = 404;
         Student student = new Student();
         student = DataHandler.readStudentByID(studentID);
-        if (student.setStudent_Notes(notes)){
+        if (student != null){
+            student.setStudent_Notes(notes);
             DataHandler.updateStudent();
             httpStatus = 200;
         }

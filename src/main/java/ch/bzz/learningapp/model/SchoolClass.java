@@ -18,13 +18,12 @@ public class SchoolClass {
         return learned;
     }
 
-    public boolean addToLearned(int value){
+    public void addToLearned(int value){
         int[] tempArray = new int[learned.length+1];
         for (int i = 0; i < learned.length; i++){
             tempArray[i] = learned[i];
         }
         tempArray[tempArray.length-1] = value;
         learned = tempArray.clone();
-        return true;
     }
 }

@@ -24,8 +24,7 @@ public class Student {
     public String getPortraitPath() {
         return portraitPath;
     }
-    public boolean setStudent_Notes(String student_Notes) {
+    public void setStudent_Notes(String student_Notes) {
         this.student_Notes = student_Notes;
-        return true;
     }
 }

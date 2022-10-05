@@ -44,13 +44,12 @@ public class SchoolClassService {
             @QueryParam("learnedValue") int learnedValue
     ){
         int httpStatus = 404;
-        if (learnedValue > 0 && learnedValue <= 100){
-            SchoolClass schoolClass = new SchoolClass();
-            schoolClass = DataHandler.readSchoolClassByID(schoolClassID);
-            if (schoolClass.addToLearned(learnedValue)){
-                DataHandler.updateSchoolClass();
-                httpStatus = 200;
-            }
+        SchoolClass schoolClass = new SchoolClass();
+        schoolClass = DataHandler.readSchoolClassByID(schoolClassID);
+        if (learnedValue > 0 && learnedValue <= 100 && schoolClass!=null){
+            schoolClass.addToLearned(learnedValue);
+            DataHandler.updateSchoolClass();
+            httpStatus = 200;
         }
         return Response
                 .status(httpStatus)
