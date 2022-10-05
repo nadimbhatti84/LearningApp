@@ -33,4 +33,30 @@ public class SchoolClassService {
                 .build();
     }
 
+    /**
+     * adds learned status to schoolClass
+     */
+    @GET
+    @Path("addLearned")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addLearned(
+            @QueryParam("schoolClassID") String schoolClassID,
+            @QueryParam("learnedValue") int learnedValue
+    ){
+        int httpStatus = 404;
+        if (learnedValue > 0 && learnedValue <= 100){
+            SchoolClass schoolClass = new SchoolClass();
+            schoolClass = DataHandler.readSchoolClassByID(schoolClassID);
+            if (schoolClass.addToLearned(learnedValue)){
+                DataHandler.updateSchoolClass();
+                httpStatus = 200;
+            }
+        }
+        return Response
+                .status(httpStatus)
+                .entity("")
+                .build();
+    }
+
+
 }
