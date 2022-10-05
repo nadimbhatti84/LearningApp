@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Learning App | Lernmodus</title>
+</head>
+<body>
+<h1>Lernmodus auswählen</h1>
+<button id="cancel" type="submit">Zurück</button>
+<div class="content">
+    <div id="modusButtons">
+        <button id="write">Schreiben</button>
+        <button id="choice">Multiple-choice</button>
+    </div>
+</div>
+</body>
+<script defer>
+    const url = new URL(window.location.href);
+    const schoolClass =  url.searchParams.get("class");
+    document.getElementById("cancel").addEventListener(
+        "click", () => {
+            window.location.href = './index.html';
+        })
+    document.getElementById("write").addEventListener(
+        "click", () => {
+            window.location.href = './play.html?class=' + schoolClass;
+        })
+    document.getElementById("choice").addEventListener(
+        "click", () => {
+            window.location.href = './playMultiplechoice.html?class=' + schoolClass;
+        })
+</script>
+</html>

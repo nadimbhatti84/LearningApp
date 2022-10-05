@@ -9,7 +9,7 @@ var nextB = document.getElementById("next");
 var checkB = document.getElementById("check");
 document.getElementById("pageTitle").innerHTML = "Lernmodus " + schoolClass;
 document.getElementById("cancel").addEventListener(
-    "click", () => {window.location.href = './index.html';
+    "click", () => {window.location.href = './learnMode.html?class=' + schoolClass;
 })
 nextB.addEventListener(
     "click", () => nextStudent()
@@ -26,39 +26,34 @@ fetch(
         }
         var student = getRandomStudent();
         if(!(student === undefined)){
-            startPlay(student);
+            nextStudent();
         } else {
             location.reload();
         }
     });
 function getRandomStudent() {
     nextB.disabled = true;
-    return students[Math.floor(Math.random() * students.length-1)];
-}
-function startPlay(student) {
-    imageOfStudent.setAttribute('src', student.portraitPath);
-    students.splice(students.indexOf(student), 1);
-    chosenStudent = student;
+    return students[Math.floor(Math.random() * students.length)];
 }
 function nextStudent() {
-    if(students.length >= 0){
+    if(students.length > 0){
         const student = getRandomStudent();
-        if (!(student === undefined)){
-            chosenStudent = student;
-            document.getElementById("correction").disabled = false;
-            imageOfStudent.src = student.portraitPath;
-            students.splice(students.indexOf(student), 1);
-            checkB.disabled = false;
-            document.getElementById("guess").style.backgroundColor = "white";
-            document.getElementById("correction").style.visibility = "hidden";
-            document.getElementById("guess").value = "";
-            console.log("Richtig: " + rightanswers);
-            console.log("Falsch: " + wronganswers);
-        } else {
-            nextB.click();
-        }
+        console.log(students);
+        students.splice(students.indexOf(student), 1);
+        chosenStudent = student;
+        document.getElementById("correction").disabled = false;
+        imageOfStudent.src = student.portraitPath;
+        checkB.disabled = false;
+        document.getElementById("guess").style.backgroundColor = "white";
+        document.getElementById("correction").style.visibility = "hidden";
+        document.getElementById("guess").value = "";
     } else {
+        sendScore(getScore(wronganswers, rightanswers));
     }
+}
+function sendScore(score){
+    window.location.href = './evaluation.html?score=' + score + "&class=" + schoolClass;
+
 }
 function checkStudent(student) {
     checkB.disabled = true;
@@ -78,7 +73,12 @@ function checkStudent(student) {
             wronganswers++;
         }
     }
-    students.splice(students.indexOf(student), 1);
+    sendScore(getScore(wronganswers, rightanswers));
+}
+function getScore(wrong, right){
+    var total = wrong + right;
+    var percentage = right / total;
+    return Math.round(percentage);
 }
 checkB.addEventListener(
     "click", () => checkStudent(chosenStudent)

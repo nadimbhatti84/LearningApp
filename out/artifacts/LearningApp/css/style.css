@@ -18,7 +18,7 @@ h1 {
     display: flex;
     flex-direction: column;
 }
-#content {
+.content {
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 20px;
@@ -67,6 +67,7 @@ h1 {
     background-color: #F5EFE6;
 }
 .studentElement {
+    background-color: #F5EFE6;
     margin: 20px;
     border: 2px solid #7895B2;
     width: 250px;
@@ -165,4 +166,74 @@ h1 {
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column;
+}
+#evaluation {
+    margin: auto;
+    width: max-content;
+    border: 2px solid #7895B2;
+    background-color: #F5EFE6;
+    border-radius: 15px;
+    text-align: center;
+}
+#evaluationScore {
+    padding: 50px;
+    font-size: 40px;
+}
+#retry {
+    width: max-content;
+    margin-top: 30px;
+    background-color: #AEBDCA;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 20px;
+    align-self: center;
+}
+#retry:hover {
+    background-color: #F5EFE6;
+}
+#evFLex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#modusButtons {
+    padding: 40px;
+    border: 2px solid #7895B2;
+    border-radius: 15px;
+    background-color: #F5EFE6;
+    margin: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#write, #choice {
+    width: max-content;
+    background-color: #AEBDCA;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 20px;
+    align-self: center;
+}
+#write:hover, #choice:hover {
+    background-color: #F5EFE6;
+}
+#nextChoice {
+    width: max-content;
+    background-color: #AEBDCA;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 20px;
+    align-self: center;
+}
+#nextChoice:hover {
+    background-color: #F5EFE6;
+}
+#playMultiImage {
+    width: 350px;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }

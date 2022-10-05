@@ -36,7 +36,7 @@ fetch(
             window.location.href = "./schoolClass.html?class=" + content;
         }
         function sendLearn(content) {
-            window.location.href = "./play.html?class=" + content;
+            window.location.href = "./learnMode.html?class=" + content;
         }
         for(var i = 0; i < viewElements.length; i++) {
             const value = viewElements[i].value

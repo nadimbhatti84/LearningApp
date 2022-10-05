@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="LearningApp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>LearningApp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="BookUltimate-1.war">
+      <element id="artifact" artifact-name="LearningApp:war exploded" />
+    </root>
+  </artifact>
+</component>
