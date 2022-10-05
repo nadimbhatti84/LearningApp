@@ -56,25 +56,4 @@ public class SchoolClassService {
                 .build();
     }
 
-    /**
-     * updates a schoolClass (adds learning process)
-     * @param schoolClass the id
-     * @return Response
-     */
-    @POST
-    @Path("update")
-    @Produces(MediaType.TEXT_PLAIN)
-    public Response updateSchoolClass(
-            @Valid @BeanParam SchoolClass schoolClass
-    ){
-        int httpStatus = 200;
-        SchoolClass oldSchoolClass = DataHandler.readSchoolClassByID(Integer.toString(schoolClass.getSchoolClassID()));
-        oldSchoolClass.getLearned().add(schoolClass.getLearned().get(0));
-        DataHandler.updateSchoolClass();
-        return Response
-                .status(httpStatus)
-                .entity("")
-                .build();
-    }
-
 }

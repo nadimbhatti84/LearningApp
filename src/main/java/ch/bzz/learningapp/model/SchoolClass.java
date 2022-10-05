@@ -7,7 +7,7 @@ public class SchoolClass {
     private int schoolClassID;
     private String schoolClassName;
     private int[] studentIDs;
-    private Vector<Float> learned;
+    private int[] learned;
 
     public int getSchoolClassID() {
         return schoolClassID;
@@ -16,7 +16,7 @@ public class SchoolClass {
         return schoolClassName;
     }
     public int[] getStudentIDs() { return studentIDs; }
-    public Vector<Float> getLearned() {
+    public int[] getLearned() {
         return learned;
     }
 }
