@@ -3,12 +3,11 @@ package ch.bzz.learningapp.service;
 import ch.bzz.learningapp.data.DataHandler;
 import ch.bzz.learningapp.model.SchoolClass;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.validation.Valid;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.xml.crypto.Data;
 import java.util.List;
 
 /**
@@ -56,6 +55,5 @@ public class SchoolClassService {
                 .entity(schoolClass)
                 .build();
     }
-
 
 }
