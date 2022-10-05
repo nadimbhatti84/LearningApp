@@ -15,15 +15,17 @@
     <h1 id="pageTitle"> </h1>
     <button id="cancel" type="submit">Zurück</button>
     <div id="content">
-        <div class="classContainerPlay">
+        <div id="classContainerPlay">
             <img id="playImage">
             <input type="text" id="guess" name="userGuess" placeholder="Vorname Nachname" autocomplete="off">
             <div id="correction">
-                <b><p class="wrong">Richtig wäre: </p></b>
-                <p class="answer">David Goggins</p>
+                <b><p class="wrong">Richtige Antwort:</p></b>
+                <p id="answer"></p>
             </div>
-            <button id="check">Überprüfen</button>
-            <button id="next">Nächste</button>
+            <div id="buttonDiv">
+                <button id="check">Überprüfen</button>
+                <button id="next">Nächste</button>
+            </div>
         </div>
     </div>    
 </body>
