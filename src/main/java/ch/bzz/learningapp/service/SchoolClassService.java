@@ -33,27 +33,4 @@ public class SchoolClassService {
                 .build();
     }
 
-    /**
-     * lists the corresponding schoolClass to given id
-     */
-    @GET
-    @Path("read")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response readCountry(
-            @QueryParam("schoolClassID") String schoolClassID
-    ){
-        int httpStatus;
-        SchoolClass schoolClass = new SchoolClass();
-        httpStatus = 200;
-        schoolClass = DataHandler.readSchoolClassByID(schoolClassID);
-        if (schoolClass == null){
-            httpStatus = 404;
-        }
-
-        return Response
-                .status(httpStatus)
-                .entity(schoolClass)
-                .build();
-    }
-
 }

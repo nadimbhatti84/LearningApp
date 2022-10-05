@@ -26,26 +26,4 @@ public class StudentService {
                 .entity(studentList)
                 .build();
     }
-
-    /**
-     * lists the corresponding student to given id
-     */
-    @GET
-    @Path("read")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response readStudent(
-            @QueryParam("studentID") String studentID
-    ){
-        int httpStatus = 200;
-        Student student = null;
-        student = DataHandler.readStudentByID(studentID);
-        if (student == null){
-            httpStatus = 404;
-        }
-
-        return Response
-                .status(httpStatus)
-                .entity(student)
-                .build();
-    }
 }
