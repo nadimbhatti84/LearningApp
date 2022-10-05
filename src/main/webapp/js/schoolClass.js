@@ -6,6 +6,8 @@ document.getElementById("cancel").addEventListener("click", () => {
     window.location.href = './index.html';
 })
 
+console.log('12312312312')
+
 var container = document.getElementById("classContainer");
 fetch(
     './resource/student/list'
