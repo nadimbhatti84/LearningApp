@@ -1,4 +1,3 @@
-import {customPath} from './config.js';
 const url = new URL(window.location.href);
 const schoolClass =  url.searchParams.get("class")
 document.getElementById("pageTitle").innerHTML = schoolClass;
@@ -6,8 +5,6 @@ document.getElementById("pageTitle").innerHTML = schoolClass;
 document.getElementById("cancel").addEventListener("click", () => {
     window.location.href = './index.html';
 })
-
-console.log(customPath);
 
 var container = document.getElementById("classContainer");
 fetch(
@@ -21,7 +18,6 @@ fetch(
                 students.push(data[i].studentID);
             }
         }
-        console.log(data);
         for (var i = 0; i < data.length; i++) {
             for (var j = 0; j < students.length; j++) {
                 if(data[i].studentID === students[j]) {
@@ -30,7 +26,7 @@ fetch(
 
                     var imgEl = document.createElement('img');
                     imgEl.setAttribute('class', 'picture');
-                    imgEl.src = customPath +  data[i].portraitPath;
+                    imgEl.src = './' +  data[i].portraitPath;
 
                     var pEl = document.createElement('p');
                     pEl.setAttribute('class', 'studentName');
