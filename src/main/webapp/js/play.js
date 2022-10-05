@@ -14,7 +14,6 @@ document.getElementById("cancel").addEventListener(
 nextB.addEventListener(
     "click", () => nextStudent()
 );
-
 fetch(
     './resource/student/list'
 )  .then((response) => response.json())
@@ -32,7 +31,6 @@ fetch(
             location.reload();
         }
     });
-
 function getRandomStudent() {
     nextB.disabled = true;
     return students[Math.floor(Math.random() * students.length-1)];

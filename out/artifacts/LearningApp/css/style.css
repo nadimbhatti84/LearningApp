@@ -10,7 +10,7 @@ h1 {
     font-size: 60px;
     font-weight: 200;
 }
-.ClassContainer {
+#ClassContainer {
     height: max-content;
     border: 2px solid #7895B2;
     border-radius: 15px;
@@ -104,7 +104,7 @@ h1 {
 #cancel:hover {
     background-color: #F5EFE6;
 }
-.classContainerPlay {
+#classContainerPlay {
     width: 900px;
     margin: auto;
     display: flex;
@@ -143,21 +143,26 @@ h1 {
     background-color: #AEBDCA;
     padding: 7px;
     border-radius: 5px;
-    font-size: 20px;  
-    margin: 30px;
+    font-size: 20px;
 }
 #check:hover {
     background-color: #F5EFE6;
 }
 #next {
-    position: absolute;
-    float: right;
     background-color: #AEBDCA;
     padding: 7px;
     border-radius: 5px;
-    font-size: 20px;  
-    margin: 676px 0 0 770px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
 }
 #next:hover {
     background-color: #F5EFE6;
+}
+#buttonDiv {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
 }
