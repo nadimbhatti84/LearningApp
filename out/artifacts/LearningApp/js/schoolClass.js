@@ -38,17 +38,3 @@ fetch(
             }
         }
     });
-document.getElementById("downloadButton").addEventListener("click", ()=>
-    generatePDF()
-);
-
-function generatePDF() {
-    var doc = new jsPDF();
-
-    for (var i = 0; i < students.length; i++) {
-        var img = new Image();
-        img.src = students[i].portraitPath;
-        doc.addImage(img, 'jpg', 10, 78, 12, 15);
-    }
-    doc.save("HTML2PDF.pdf");
-}
