@@ -305,3 +305,18 @@ th {
 td {
     width: 200px;
 }
+#playNotes{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+#playNotesArea {
+    height: 200px;
+    width: 200px;
+}
+#playMultiNotes {
+
+}

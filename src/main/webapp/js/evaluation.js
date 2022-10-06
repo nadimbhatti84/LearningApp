@@ -25,7 +25,6 @@ fetch(
                 console.log(schoolClassID);
             }
         }
-        //json can't save 0's --> make it char
         fetch(
             "./resource/schoolClass/addLearned?schoolClassID=" + schoolClassID.toString() +
             "&learnedValue=" + score

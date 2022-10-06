@@ -3,8 +3,10 @@ const schoolClass =  url.searchParams.get("class");
 const imageOfStudent = document.getElementById("playImage");
 var students = [];
 var chosenStudent;
+var currentStudent = null;
 var rightanswers = 0;
 var wronganswers = 0;
+var studentIndex = 0;
 var nextB = document.getElementById("next");
 var checkB = document.getElementById("check");
 document.getElementById("pageTitle").innerHTML = "Lernmodus " + schoolClass;
@@ -24,8 +26,8 @@ fetch(
                 students.push(data[i]);
             }
         }
-        var student = getRandomStudent();
-        if(!(student === undefined)){
+        currentStudent = getRandomStudent();
+        if(!(currentStudent === undefined)){
             nextStudent();
         } else {
             location.reload();
@@ -35,25 +37,29 @@ function getRandomStudent() {
     nextB.disabled = true;
     return students[Math.floor(Math.random() * students.length)];
 }
-function nextStudent() {
+function nextStudent(student) {
     if(students.length > 0){
+        if(studentIndex > 0) {
+            uploadNotes(currentStudent, document.getElementById("playNotesArea").value)
+        }
         const student = getRandomStudent();
-        console.log(students);
         students.splice(students.indexOf(student), 1);
         chosenStudent = student;
+        document.getElementById("playNotesArea").value = student.student_Notes;
         document.getElementById("correction").disabled = false;
         imageOfStudent.src = student.portraitPath;
         checkB.disabled = false;
         document.getElementById("guess").style.backgroundColor = "white";
         document.getElementById("correction").style.visibility = "hidden";
         document.getElementById("guess").value = "";
+        studentIndex++;
+        currentStudent = student;
     } else {
         sendScore(getScore(wronganswers, rightanswers));
     }
 }
 function sendScore(score){
     window.location.href = './evaluation.html?score=' + score + "&class=" + schoolClass;
-
 }
 function checkStudent(student) {
     checkB.disabled = true;
@@ -73,12 +79,17 @@ function checkStudent(student) {
             wronganswers++;
         }
     }
-    sendScore(getScore(wronganswers, rightanswers));
 }
 function getScore(wrong, right){
     var total = wrong + right;
     var percentage = 100* (right / total);
     return Math.round(percentage);
+}
+function uploadNotes(student, notes) {
+    fetch(
+        "./resource/student/addNotes?studentID=" + student.studentID.toString() +
+        "&notes=" + notes
+    );
 }
 checkB.addEventListener(
     "click", () => checkStudent(chosenStudent)
