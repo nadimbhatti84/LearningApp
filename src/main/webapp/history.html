@@ -8,19 +8,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/playMultiplechoice.js" defer></script>
-    <title>Learning App | Multiplechoice</title>
+    <script src="js/history.js" defer></script>
+    <title>Learning App | Verlauf</title>
 </head>
 <body>
-<h1 id="pageTitle"></h1>
+<h1>Verlauf</h1>
 <button id="cancel" type="submit">Zurück</button>
 <div class="content">
-    <div id="classContainerPlayMulti">
-        <img id="playMultiImage">
-        <div id="multiButtons">
-            <div id="randomNames"></div>
-            <button id="nextChoice">Nächste</button>
-        </div>
+    <div id="historyContainer">
+        <table id="historyTable">
+            <tr>
+                <th>Versuch</th>
+                <th>Trefferquote</th>
+            </tr>
+        </table>
     </div>
 </div>
 </body>
