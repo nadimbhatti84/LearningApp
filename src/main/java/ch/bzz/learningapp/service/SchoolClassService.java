@@ -46,7 +46,7 @@ public class SchoolClassService {
         int httpStatus = 404;
         SchoolClass schoolClass = new SchoolClass();
         schoolClass = DataHandler.readSchoolClassByID(schoolClassID);
-        if (learnedValue > 0 && learnedValue <= 100 && schoolClass!=null){
+        if (learnedValue >= 0 && learnedValue <= 100 && schoolClass!=null){
             schoolClass.addToLearned(learnedValue);
             DataHandler.updateSchoolClass();
             httpStatus = 200;

@@ -229,11 +229,41 @@ h1 {
 #nextChoice:hover {
     background-color: #F5EFE6;
 }
+#classContainerPlayMulti {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border: 2px solid #7895B2;
+    border-radius: 15px;
+    background-color: #F5EFE6;
+}
 #playMultiImage {
     width: 350px;
     border-radius: 15px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    margin: 50px auto 50px auto;
+}
+#randomNames {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px 0 40px 0;
+}
+.nameButton {
+    width: 400px;
+    background-color: #AEBDCA;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 20px;
+    align-self: center;
+}
+.nameButton:hover {
+    background-color: #F5EFE6;
+}
+#multiButtons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
 }

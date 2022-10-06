@@ -3,11 +3,14 @@ const schoolClass =  url.searchParams.get("class");
 const imageOfStudent = document.getElementById("playMultiImage");
 var students = [];
 var allStudents = [];
+var generatedNames = [];
+var generatedButtons = [];
 var chosenStudent;
 var rightanswers = 0;
 var wronganswers = 0;
+const namesContainer = document.getElementById("randomNames");
 var nextB = document.getElementById("nextChoice");
-document.getElementById("pageTitle").innerHTML = "Lernmodus " + schoolClass;
+document.getElementById("pageTitle").innerHTML = "Multiple choice " + schoolClass;
 document.getElementById("cancel").addEventListener(
     "click", () => {window.location.href = './learnMode.html?class=' + schoolClass;
     })
@@ -25,19 +28,13 @@ fetch(
                 allStudents.push(data[i].studentFirstName + " " + data[i].studentLastName);
             }
         }
-        console.log(getFiveNames("Lindian"));
-        var student = getRandomStudent();
-        if(!(student === undefined)){
-            nextStudent();
-        } else {
-            location.reload();
-        }
+        nextStudent();
     });
 function getFiveNames(answerName) {
     var arr = [];
     while(arr.length < 4) {
         var name = allStudents[Math.floor(Math.random() * allStudents.length)];
-        if(!arr.includes(name))  {
+        if(!arr.includes(name) && name !== answerName)  {
           arr.push(name);
       }
     }
@@ -50,7 +47,13 @@ function getRandomStudent() {
 }
 function nextStudent() {
     if(students.length > 0){
+        while (namesContainer.firstChild) {
+            namesContainer.removeChild(namesContainer.firstChild);
+        }
+        generatedButtons = [];
+        generatedNames = [];
         const student = getRandomStudent();
+        createNames(getFiveNames(student.studentFirstName + " " + student.studentLastName))
         students.splice(students.indexOf(student), 1);
         chosenStudent = student;
         imageOfStudent.src = student.portraitPath;
@@ -62,28 +65,46 @@ function sendScore(score){
     window.location.href = './evaluation.html?score=' + score + "&class=" + schoolClass;
 
 }
-function checkStudent(student) {
-    checkB.disabled = true;
-    var name = document.getElementById("guess").value;
-    if(name === ""){
-        alert("Leeres Feld");
-        checkB.disabled = false;
-    }else {
-        nextB.disabled = false;
-        var realname = student.studentFirstName + " " + student.studentLastName;
-        if (name.toLowerCase() === realname.toLowerCase()) {
-            document.getElementById("guess").style.backgroundColor = "green";
-            rightanswers++;
-        } else {
-            document.getElementById("answer").innerText = realname;
-            document.getElementById("correction").style.visibility = "visible";
-            wronganswers++;
-        }
+function checkStudent(guess, buttons) {
+    for (let i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = true;
     }
-    sendScore(getScore(wronganswers, rightanswers));
+    var rightName = chosenStudent.studentFirstName + " " + chosenStudent.studentLastName;
+    if(guess.value === rightName) {
+        guess.style.backgroundColor = "green";
+        guess.style.color = "white";
+        rightanswers++;
+    } else {
+        guess.style.backgroundColor = "red";
+        console.log(rightName);
+        console.log(generatedNames);
+        console.log(generatedButtons);
+        generatedButtons[generatedNames.indexOf(rightName)].style.backgroundColor = "green";
+        generatedButtons[generatedNames.indexOf(rightName)].style.color = "white";
+        wronganswers++;
+    }
+    console.log(rightanswers + " / " + wronganswers);
 }
 function getScore(wrong, right){
     var total = wrong + right;
-    var percentage = right / total;
+    var percentage = 100*(right / total);
     return Math.round(percentage);
+}
+function createNames(names) {
+    for(var i = 0; i < names.length; i++) {
+        const button = document.createElement("button");
+        button.setAttribute("type", "submit");
+        button.setAttribute("value", names[i]);
+        button.setAttribute("class", "nameButton");
+        button.textContent = names[i];
+        generatedNames.push(button.value);
+        generatedButtons.push(button);
+        namesContainer.appendChild(button);
+        button.addEventListener(
+            "click", () => {
+                checkStudent(button, generatedButtons)
+                nextB.disabled = false;
+            }
+        )
+    }
 }

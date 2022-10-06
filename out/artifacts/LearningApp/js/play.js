@@ -77,7 +77,7 @@ function checkStudent(student) {
 }
 function getScore(wrong, right){
     var total = wrong + right;
-    var percentage = right / total;
+    var percentage = 100* (right / total);
     return Math.round(percentage);
 }
 checkB.addEventListener(
